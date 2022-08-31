@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body{
+  height: 100vh;
+  background-color: #F3F5FC;
+}
+
+nav{
+  padding: 20px;
+}
+
+.juego{
+  display: flex;
+  height: 85vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.juego .botones{
+  display: flex;
+  display: none;
+  height: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.anadirPalabra{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 85vh;
+}
+
+.botones-palabra{
+  display: flex;
+  width: 500px;
+}
+
+#palabraNueva{
+  background-color: #F3F5FC;
+  width: 500px;
+  height: 500px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  resize: none;
+  font-size: 24px;
+}
+
+#palabraNueva::placeholder{
+  color: #0A3871;
+}
+
+#palabraNueva:focus{
+  outline: none;
+}
+
+
+.btn-start{
+  cursor: pointer;
+  background-color: #0A3871;
+  color: #ffffff;
+  width: 250px;
+  font-size: 20px;
+  padding: 24px;
+  border: 1px solid #0A3871;
+  border-radius: 24px;
+}
+
+.btn-start:hover{
+  background-color: #052d5e;
+  color: #ffffff;
+}
+
+.btn-addword{
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #0A3871;
+  border: 1px solid #0A3871;
+  border-radius: 24px;
+  font-size: 20px;
+  padding: 24px;
+}
+
+.btn-addword:hover{
+  background-color: #f3f3f3;
+  color: #0A3871;
+}
+
+footer{
+  width: 100%;
+  height: 53px;
+  background-color: #0A3871;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
