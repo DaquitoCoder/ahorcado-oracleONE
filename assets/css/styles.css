@@ -13,7 +13,7 @@ body{
 }
 
 nav{
-  padding: 20px;
+  padding: 38px 0 0 40px;
 }
 
 .juego{
@@ -23,17 +23,16 @@ nav{
   align-items: center;
 }
 
-.juego .botones{
+.juego .botones-iniciales{
   display: flex;
-  display: none;
   height: 100px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.anadirPalabra{
-  display: flex;
+.anadir-palabra{
+  display: none;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -42,7 +41,25 @@ nav{
 
 .botones-palabra{
   display: flex;
+  justify-content: space-evenly;
   width: 500px;
+}
+
+.tablero-juego{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tablero-juego textarea{
+  margin: 20px 0;
+  width: 500px;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 26px;
+  resize: none;
 }
 
 #palabraNueva{

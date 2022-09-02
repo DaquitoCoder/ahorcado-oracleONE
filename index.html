@@ -9,22 +9,27 @@
   </head>
   <body>
     <nav>
-      <img src="assets/Vector.png" alt="Logo Alura" />
+     <a href="/"><img src="assets/Vector.png" alt="Logo Alura" /></a>
     </nav>
     <div class="juego">
-      <div class="botones">
-        <button class="btn-start" id="btn-start">Iniciar Juego</button>
+      <div class="botones-iniciales">
+        <button class="btn-start" id="btn-start" onclick="iniciarJuego()">Iniciar Juego</button>
         <br />
-        <button class="btn-addword" id="btn-addword">
+        <button class="btn-addword" id="btn-addword" onclick="mostrarAddPalabra()">
           Agregar nueva palabra
         </button>
       </div>
-      <div class="anadirPalabra">
+      <div class="anadir-palabra">
         <textarea id="palabraNueva" placeholder="Ingrese una palabra"></textarea>
         <div class="botones-palabra">
-          <button class="btn-start" id="btn-empezarJuego">Guardar y empezar</button>
-          <button class="btn-addword" id="btn-cancel">Cancelar</button>
+          <button class="btn-start" id="btn-empezarJuego" onclick="addPalabra()">Guardar y empezar</button>
+          <button class="btn-addword" id="btn-cancel" onclick="cancelar()">Cancelar</button>
         </div>
+      </div>
+      <div class="tablero-juego">
+        <div class="ahorcado"></div>
+        <div class="lineas-letras"></div>
+        <textarea id="intento-palabra" placeholder="Ingrese la palabra..."></textarea>
       </div>
     </div>
     <footer>
