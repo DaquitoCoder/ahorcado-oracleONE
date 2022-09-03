@@ -22,6 +22,7 @@ let palabras = [
 const palabra = palabras[Math.floor(Math.random() * palabras.length)];
 
 let palabraLetrasAdivinadas = [];
+let letrasPasadasArray = [];
 palabraLetrasAdivinadas.length = palabra.length;
 
 let fallos = 0;
@@ -82,10 +83,10 @@ const iniciarJuego = () => {
 const detectarLetra = () => {
   
   const textareaLetra = document.getElementById('intento-palabra');
-  
+  const letrasPasadas = document.getElementById('letras-pasadas');
 
-  if (textareaLetra.value == '') {
-    alert('Ingresa una letra');
+  if (textareaLetra.value == '' || !isNaN(textareaLetra.value)) {
+    alert('Ingresa una letra.');
   } else {
     const letra = textareaLetra.value[0].toUpperCase();
     textareaLetra.value = '';
@@ -117,7 +118,16 @@ const detectarLetra = () => {
       }
 
     } else {
-      fallos += 1;
+      if(letrasPasadasArray.indexOf(letra) == -1) {
+        letrasPasadasArray.push(letra);
+        fallos += 1;
+      }
+
+      for(let i = 0; i < letrasPasadasArray.length; i++) {
+        letrasPasadas.innerHTML = letrasPasadasArray.join(', ');
+      }
+      
+
       mostrarImagen();
     }
   }
