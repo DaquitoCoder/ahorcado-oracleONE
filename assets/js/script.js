@@ -18,6 +18,7 @@ let palabras = [
   'SILLA',
   'SOFA',
 ];
+
 const palabra = palabras[Math.floor(Math.random() * palabras.length)];
 
 let palabraLetrasAdivinadas = [];
@@ -79,7 +80,10 @@ const iniciarJuego = () => {
 };
 
 const detectarLetra = () => {
+  
   const textareaLetra = document.getElementById('intento-palabra');
+  
+
   if (textareaLetra.value == '') {
     alert('Ingresa una letra');
   } else {
@@ -125,7 +129,7 @@ const mostrarImagen = () => {
   imgAhorcado.src = 'assets/' + fallos + '.png';
 
   if (fallos == 7) {
-    alert('Perdiste! Inténtalo de nuevo');
+    alert('Perdiste! La palabra era ' + palabra + '. Inténtalo de nuevo');
     location.reload();
   }
 }
